@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './index.css';
 import './App.css';
+import './components/styles/video-app.css';
 import YTSearch from 'youtube-api-search';
 import SearchBar from './components/SearchBar';
 import VideoList from './components/VideoList';
