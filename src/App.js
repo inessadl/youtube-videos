@@ -19,14 +19,17 @@ class App extends Component {
       selectedVideo: null
     };
 
-    YTSearch({ key: API_KEY, term: 'react course'}, (videos) => {
-      // console.log(data);
-      this.setState({
-        videos: videos,
-        selectedVideo: videos[0]
-      });
-    });
+    this.videoSearch('longboard');
+}
 
+videoSearch(term) {
+  YTSearch({ key: API_KEY, term: term}, (videos) => {
+    // console.log(data);
+    this.setState({
+      videos: videos,
+      selectedVideo: videos[0]
+    });
+  });
 }
 
   render() {
