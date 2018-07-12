@@ -39,7 +39,7 @@ videoSearch(term) {
       // <div className="App">
       <div>
         <header className="App-header"></header>
-        <SearchBar />
+      <SearchBar onSearchTermChange={term => this.videoSearch(term)}/>
         <VideoDetail video={ this.state.selectedVideo } />
         <VideoList
           onVideoSelect={selectedVideo => this.setState({selectedVideo})}
