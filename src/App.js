@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import './index.css';
 import './App.css';
@@ -5,7 +6,7 @@ import './components/styles/video-app.css';
 import YTSearch from 'youtube-api-search';
 import SearchBar from './components/SearchBar';
 import VideoList from './components/VideoList';
-import VideoItem from './components/VideoItem';
+// import VideoItem from './components/VideoItem';
 import VideoDetail from './components/VideoDetail';
 
 import API_KEY from './.env/config.js';
@@ -33,13 +34,13 @@ videoSearch(term) {
 }
 
   render() {
-    console.log(API_KEY);
+    const videoSearch = _.debounce((term) => { this.videoSearch(term)}, 300);
 
     return (
       // <div className="App">
       <div>
         <header className="App-header"></header>
-      <SearchBar onSearchTermChange={term => this.videoSearch(term)}/>
+      <SearchBar onSearchTermChange={videoSearch}/>
         <VideoDetail video={ this.state.selectedVideo } />
         <VideoList
           onVideoSelect={selectedVideo => this.setState({selectedVideo})}
