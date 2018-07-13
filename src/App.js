@@ -6,7 +6,6 @@ import './components/styles/video-app.css';
 import YTSearch from 'youtube-api-search';
 import SearchBar from './components/SearchBar';
 import VideoList from './components/VideoList';
-// import VideoItem from './components/VideoItem';
 import VideoDetail from './components/VideoDetail';
 
 import API_KEY from './.env/config.js';
@@ -25,7 +24,6 @@ class App extends Component {
 
 videoSearch(term) {
   YTSearch({ key: API_KEY, term: term}, (videos) => {
-    // console.log(data);
     this.setState({
       videos: videos,
       selectedVideo: videos[0]
@@ -37,7 +35,6 @@ videoSearch(term) {
     const videoSearch = _.debounce((term) => { this.videoSearch(term)}, 300);
 
     return (
-      // <div className="App">
       <div>
         <header className="App-header"></header>
       <SearchBar onSearchTermChange={videoSearch}/>
