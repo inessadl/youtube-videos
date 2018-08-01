@@ -1,3 +1,7 @@
+.MuiAppBar-colorPrimary-8 {
+  background-color: #212121!important;
+}
+
 .search-bar {
   margin: 20px;
   text-align: center;
@@ -15,11 +19,12 @@
   margin-top: 10px;
   padding: 10px;
   border: 1px solid #ddd;
-  border-radius: 4px;
 }
 
 .list-group-item {
   cursor: pointer;
+  margin-bottom: 1em;
+  border-radius: 0;
 }
 
 .list-group-item:hover {
