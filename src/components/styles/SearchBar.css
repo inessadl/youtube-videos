@@ -1,4 +1,10 @@
+.search-bar {
+  margin: 20px;
+  text-align: center;
+}
+
 .search-bar input {
+  width: 75%;
   text-transform: capitalize;
   padding-left: 5px;
 }
