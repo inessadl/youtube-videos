@@ -2,12 +2,12 @@ import _ from 'lodash';
 import React, {Component} from 'react';
 import './index.css';
 import './App.css';
-import './components/styles/video-app.css';
+import './components/styles/AppBar.css';
 import YTSearch from 'youtube-api-search';
 import SearchBar from './components/SearchBar';
 import VideoList from './components/VideoList';
 import VideoDetail from './components/VideoDetail';
-import SimpleAppBar from './components/SimpleAppBar';
+import AppBar from './components/AppBar';
 
 import API_KEY from './.env/config.js';
 
@@ -20,7 +20,7 @@ class App extends Component {
       selectedVideo: null
     };
 
-    this.videoSearch('Roger Waters');
+    this.videoSearch('Pink Floyd');
   }
 
   videoSearch(term) {
@@ -38,7 +38,7 @@ class App extends Component {
     }, 300);
 
     return (<div>
-      <SimpleAppBar />
+      <AppBar />
       <SearchBar onSearchTermChange={videoSearch}/>
       <VideoDetail video={this.state.selectedVideo}/>
       <VideoList onVideoSelect={selectedVideo => this.setState({selectedVideo})} videos={this.state.videos}/>
