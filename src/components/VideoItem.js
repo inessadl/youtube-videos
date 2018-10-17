@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles/VideoItem.css';
 
 const VideoItem = ({video, onVideoSelect}) => {
 
