@@ -1,13 +1,13 @@
 # youtube-videos
 
-Node.js application to search and view Youtube content using the Youtube API. 
+Node.js application to search and view Youtube content using the Youtube API.
 
 
 ### Prerequisites
 
 You will need the following:
 ```
-Node.js w/ npm 
+Node.js w/ npm
 A YouTube API key
 ```
 
@@ -42,10 +42,18 @@ You can search for different videos in the search bar and play media as per the 
 
 ## Troubleshooting
 
-**Q**: Videos aren't playing! 
+**Q**: Videos aren't playing!
 
-**A**: Try disabling any ad-blockers you have enabled. If your browser does not support HTML5, please switch to a modern one. 
+**A**: Try disabling any ad-blockers you have enabled. If your browser does not support HTML5, please switch to a modern one.
 
-## Acknowledgments
+## Contributors
 
-* TBD
+* **[Inessa Luerce](https://github.com/inessadl)**
+
+  * Author and maintainer
+  * Most features developed
+
+
+* **[pghu](https://github.com/pghu)**
+
+  * Improved readme file
